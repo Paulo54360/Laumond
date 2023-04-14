@@ -1,0 +1,18 @@
+<nav class="navbar">
+  <a class="navbar-logo" href="#">Patrick Laumond</a>
+  <ul class="navbar-list">
+  </ul>
+
+  <div class="navbar-burger" (click)="toggleBurgerMenu()" [ngClass]="{ 'active': active }">
+    <fa-icon [icon]="faBars" class="burger-icon"></fa-icon>
+    <div class="burger-dropdown" [ngClass]="{ 'active': showDropdown }">
+      <ul class="burger-menu">
+        <li><a href="#">MétaHisme</a></li>
+        <li><a href="#">Biographie</a></li>
+        <li><a href="#">Œuvre</a></li>
+        <li><a href="#">Actualité</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -19,17 +19,18 @@
       "dom"
     ],
     "resolveJsonModule": true,
-    "strict": true
+    "strict": true,
+
+  "paths": {
+    "@components/*": ["src/app/components/*"],
+    "@services/*": ["app/services/*"]
+
+  },
   },
   "angularCompilerOptions": {
     "strictTemplates": true,
     "strictInjectionParameters": true,
     "enableIvy": true
-  },
-  "paths": {
-    "@components/*": ["app/components/*"],
-    "@services/*": ["app/services/*"]
-
   },
   "exclude": [
     "node_modules"

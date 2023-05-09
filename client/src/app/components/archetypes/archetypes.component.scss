@@ -1,0 +1,23 @@
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.image-wrapper h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 10px 0;
+}

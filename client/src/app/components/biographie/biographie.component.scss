@@ -1,0 +1,57 @@
+.Biographie {
+  display: flex;
+  flex-direction: row;
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 25px;
+
+    a {
+      color: #000;
+      font-weight: bold;
+      margin: 10px 0;
+
+      &:hover {
+        color: #cc0000;
+      }
+    }
+    .nav-menu a {
+      color: #000;
+      font-weight: bold;
+      margin: 10px 0;
+      transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+      &:hover {
+        color: #cc0000;
+        transform: translateY(-5px);
+      }
+    }
+
+    .nav-menu a:hover {
+      transform: translateY(-5px);
+    }
+
+  }
+
+  .text-container {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    padding: 20px;
+    text-align: justify;
+    width: 80%;
+    margin: auto 300px auto auto;
+
+    h3 {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 20px 0;
+      transition: transform 0.5s ease-in-out;
+
+      &:hover {
+        transform: translateY(10px);
+      }
+    }
+  }
+}

@@ -2,27 +2,9 @@
 <a routerLink='/archetypes'>
 <h2>Archetypes</h2>
 </a>
-<carousel [images]='imagesArchetypes' [cellWidth]='75' [cellsToShow]='4'>
-</carousel>
-</div>
-<div class='Archetypes'>
-<a routerLink='/archetypes'>
-<h2>Archetypes</h2>
-</a>
-<carousel [images]='imagesArchetypes' [cellWidth]='75' [cellsToShow]='4'>
-</carousel>
-</div>
-<div class='Archetypes'>
-<a routerLink='/archetypes'>
-<h2>Archetypes</h2>
-</a>
-<carousel [images]='imagesArchetypes' [cellWidth]='100' [cellsToShow]='4'>
-</carousel>
-</div>
-<div class='Archetypes'>
-<a routerLink='/archetypes'>
-<h2>Archetypes</h2>
-</a>
-<carousel [images]='imagesArchetypes' [cellWidth]='100' [cellsToShow]='4'>
-</carousel>
+  <carousel [itemsPerSlide]="4" [singleSlideOffset]="true" [showIndicators]="false" class="custom-carousel">
+    <slide *ngFor="let image of imagesArchetypes; let i = index" class="carousel-item" >
+      <img [src]="image.path" alt="{{ image.title }}" class="carousel-image">
+    </slide>
+  </carousel>
 </div>

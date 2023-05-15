@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,7 @@ import { OeuvreComponent } from '@components/oeuvre/oeuvre.component';
 import { NewsComponent } from '@components/news/news.component';
 import { ContactComponent } from '@components/contact/contact.component';
 import { ArchetypesComponent } from './components/archetypes/archetypes.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ArchetypesComponent } from './components/archetypes/archetypes.componen
     AppRoutingModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
-    IvyCarouselModule
+    NgbModule,
+    CarouselModule,
 
   ],
   providers: [],

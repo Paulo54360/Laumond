@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import { SlickCarouselModule} from 'ngx-slick-carousel';
+import { CarouselConfig } from 'ngx-bootstrap/carousel';
+
 
 @Component({
   selector: 'app-oeuvre',
   templateUrl: './oeuvre.component.html',
-  styleUrls: ['./oeuvre.component.scss']
+  styleUrls: ['./oeuvre.component.scss'],
+  providers: [{ provide: CarouselConfig, useValue: { interval: 3000, noPause: true, showIndicators: true } }],
+
 })
 export class OeuvreComponent {
   imagesArchetypes = [

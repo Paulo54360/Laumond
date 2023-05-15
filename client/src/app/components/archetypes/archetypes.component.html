@@ -1,42 +1,16 @@
-<div class="image-container">
-  <div class="image-wrapper">
-    <img src="https://plaumondpicture.s3.eu-west-3.amazonaws.com/Archetypes+copie/02/01.jpg" alt="Slide 1" class="image">
-    <div class="image-title">Slide 1</div>
+<div class="image-gallery">
+  <div class="image-gallery-item" *ngFor="let url of imageUrls; let i = index">
+    <img [src]="url" [alt]="titles[i]" (click)="openModal(i)" />
+    <h2>{{ titles[i] }}</h2>
   </div>
-  <div class="image-wrapper">
-    <img src="https://plaumondpicture.s3.eu-west-3.amazonaws.com/Archetypes+copie/02/02.jpg" alt="Slide 2" class="image">
-    <div class="image-title">Slide 2</div>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://plaumondpicture.s3.eu-west-3.amazonaws.com/Archetypes+copie/02/03.jpg" alt="Slide 3" class="image">
-    <div class="image-title">Slide 3</div>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://plaumondpicture.s3.eu-west-3.amazonaws.com/Archetypes+copie/02/04.jpg" alt="Slide 4" class="image">
-    <div class="image-title">Slide 4</div>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://plaumondpicture.s3.eu-west-3.amazonaws.com/Archetypes+copie/02/05.jpg" alt="Slide 5" class="image">
-    <div class="image-title">Slide 5</div>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://plaumondpicture.s3.eu-west-3.amazonaws.com/Archetypes+copie/02/06.jpg" alt="Slide 6" class="image">
-    <div class="image-title">Slide 6</div>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://plaumondpicture.s3.eu-west-3.amazonaws.com/Archetypes+copie/02/07.jpg" alt="Slide 7" class="image">
-    <div class="image-title">Slide 7</div>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://plaumondpicture.s3.eu-west-3.amazonaws.com/Archetypes+copie/02/08.jpg" alt="Slide 8" class="image">
-    <div class="image-title">Slide 8</div>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://plaumondpicture.s3.eu-west-3.amazonaws.com/Archetypes+copie/02/09.jpg" alt="Slide 9" class="image">
-    <div class="image-title">Slide 9</div>
-  </div>
-  <div class="image-wrapper">
-    <img src="https://plaumondpicture.s3.eu-west-3.amazonaws.com/Archetypes+copie/02/10.jpg" alt="Slide 10" class="image">
-    <div class="image-title">Slide 10</div>
+
+  <!-- Modal -->
+  <div class="modal" [class.show]="currentImageIndex !== null" (click)="closeModal()">
+    <!-- Close icon -->
+    <span class="close" (click)="closeModal()">&times;</span>
+    <!-- Image container -->
+    <div class="modal-content">
+      <img class="modal-image" [src]="currentImageIndex !== null ? imageUrls[currentImageIndex] : ''" [alt]="currentImageIndex !== null ? titles[currentImageIndex] : ''" />
+    </div>
   </div>
 </div>

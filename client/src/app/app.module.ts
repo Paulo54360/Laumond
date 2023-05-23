@@ -15,6 +15,7 @@ import { NewsComponent } from '@components/news/news.component';
 import { ContactComponent } from '@components/contact/contact.component';
 import { ArchetypesComponent } from './components/archetypes/archetypes.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     FontAwesomeModule,
     NgbModule,
     CarouselModule,
+    MatPaginatorModule,
 
   ],
   providers: [],

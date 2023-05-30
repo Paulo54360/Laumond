@@ -14,12 +14,9 @@
 
   <!-- Modal -->
   <div class="modal" [class.show]="currentImageIndex !== null" (click)="closeModal()">
-    <!-- Close icon -->
-    <span class="close" (click)="closeModal()">&times;</span>
     <!-- Image container -->
     <div class="modal-content">
       <img class="modal-image" [src]="currentImageIndex !== null ? imageUrls[currentImageIndex] : ''" [alt]="currentImageIndex !== null ? titles[imageUrls[currentImageIndex]] : ''" />
     </div>
-  </div>
-</div>
+  </div></div>
 

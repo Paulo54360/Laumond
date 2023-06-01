@@ -22,7 +22,7 @@ export class OeuvreComponent {
       const num = i.toString().padStart(2, '0');
       const UrlsArchetypes = `api/Archetypes/02/${num}.jpg`;
       const UrlsDeployments = `api/Deployments/01/${num}.jpg`;
-      const UrlsDrawings = `api/Drawings/02/${num}.jpg`;
+      const UrlsDrawings = `api/Drawings+/01/${num}.jpg`;
       const UrlsTranscriptions = `api/Transcriptions/02/${num}.jpg`;
       this.imageUrlsArchetypes.push(UrlsArchetypes);
       this.imageUrlsDeployments.push(UrlsDeployments);

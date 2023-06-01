@@ -22,7 +22,7 @@ export class DrawingsComponent {
 
   async loadDrawing() {
     const subfolders = ['01','02', '03', '04', '05']
-    const fileRanges = [[1, 9], [1, 9], [1, 7], [1, 7], [1, 8], [1, 8], [1, 4]]; // Plage de boucle pour chaque sous-dossier
+    const fileRanges = [[1, 9], [1, 9], [1, 9], [1, 9], [1, 8]]; // Plage de boucle pour chaque sous-dossier
 
     for (let i = 0; i < subfolders.length; i++) {
       const subfolder = subfolders[i];
@@ -30,8 +30,8 @@ export class DrawingsComponent {
 
       for (let j = range[0]; j <= range[1]; j++) {
         const num = j.toString().padStart(2, '0');
-        const imageUrl = `/api/Drawing/${subfolder}/${num}.jpg`;
-        const textUrl = `/api/Drawing/${subfolder}/${num}.txt`;
+        const imageUrl = `/api/Drawings+/${subfolder}/${num}.jpg`;
+        const textUrl = `/api/Drawings+/${subfolder}/${num}.txt`;
 
         const text = await this.fetchTextContent(textUrl);
         this.imageUrls.push(imageUrl);

@@ -7,15 +7,17 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from '@components/navbar/navbar.component';
-import { HomepageComponent } from '@components/homepage/homepage.component';
-import { BiographieComponent } from '@components/biographie/biographie.component';
-import { MetahismeComponent } from '@components/metahisme/metahisme.component';
-import { OeuvreComponent } from '@components/oeuvre/oeuvre.component';
-import { NewsComponent } from '@components/news/news.component';
-import { ContactComponent } from '@components/contact/contact.component';
+import { HomepageComponent } from 'src/app/pages/homepage/homepage.component';
+import { BiographieComponent } from 'src/app/pages/biographie/biographie.component';
+import { MetahismeComponent } from 'src/app/pages/metahisme/metahisme.component';
+import { OeuvreComponent } from 'src/app/pages/oeuvre/oeuvre.component';
+import { NewsComponent } from 'src/app/pages/news/news.component';
+import { ContactComponent } from 'src/app/pages/contact/contact.component';
 import { ArchetypesComponent } from './components/archetypes/archetypes.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { DeploymentsComponent } from './components/deployments/deployments.component';
+import { DrawingsComponent } from './components/drawings/drawings.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     OeuvreComponent,
     NewsComponent,
     ContactComponent,
-    ArchetypesComponent
+    ArchetypesComponent,
+    DeploymentsComponent,
+    DrawingsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     NgbModule,
     CarouselModule,
     MatPaginatorModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,7 +2,7 @@
 <a routerLink='/archetypes'>
 <h2>Archetypes</h2>
 </a>
-  <carousel [itemsPerSlide]="4" [singleSlideOffset]="true" [showIndicators]="false" class="custom-carousel">
+  <carousel [itemsPerSlide]="4" [singleSlideOffset]="true" [interval]="0" [showIndicators]="false" class="custom-carousel">
     <slide *ngFor="let url of imageUrlsArchetypes; let i = index" class="carousel-item" >
       <img [src]="url" class="carousel-image">
     </slide>
@@ -10,17 +10,17 @@
 </div>
 
 <div class='Documentations'>
-<a routerLink='/Deployements'>
-<h2>Deployements</h2>
+<a routerLink='/Deployments'>
+<h2>Deployments</h2>
 </a>
-  <carousel [itemsPerSlide]="4" [singleSlideOffset]="true" [showIndicators]="false" class="custom-carousel">
+  <carousel [itemsPerSlide]="4" [singleSlideOffset]="true" [interval]="0" [showIndicators]="false" class="custom-carousel">
     <slide *ngFor="let url of imageUrlsDeployments; let i = index" class="carousel-item" >
       <img [src]="url" class="carousel-image">
     </slide>
   </carousel>
 </div>
 
-<div class='Documentations'>
+<!-- <div class='Documentations'>
 <a routerLink='/Drawings'>
 <h2>Drawings</h2>
 </a>
@@ -40,4 +40,4 @@
       <img [src]="url" class="carousel-image">
     </slide>
   </carousel>
-</div>
+</div> -->

@@ -17,8 +17,8 @@ const routes: Routes = [
   { path: 'metahisme', component: MetahismeComponent },
   { path: 'oeuvre', component: OeuvreComponent },
   { path: 'archetypes', component: ArchetypesComponent },
-  { path: 'Deployments', component: DeploymentsComponent },
-  { path: 'Drawings', component: DrawingsComponent },
+  { path: 'deployments', component: DeploymentsComponent },
+  { path: 'drawings', component: DrawingsComponent },
   { path: 'news', component: NewsComponent },
   { path: 'contact', component: ContactComponent },
 ];

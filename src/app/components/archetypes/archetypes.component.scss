@@ -35,7 +35,7 @@
 }
 
 .modal {
-  background-color: #fffcfcbe;
+  background-color: #fffcfcd7;
   display: none;
   height: 100%;
   left: 0;
@@ -57,6 +57,7 @@
   .modal-image {
     max-height: 90vh;
     max-width: 90vw;
+    border-radius:5px;
   }
 
   &.show {

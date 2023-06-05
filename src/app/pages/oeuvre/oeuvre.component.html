@@ -1,43 +1,62 @@
-<div class='Documentations'>
-<a routerLink='/archetypes'>
-<h2>Archetypes</h2>
-</a>
-  <carousel [itemsPerSlide]="4" [singleSlideOffset]="true" [interval]="0" [showIndicators]="false" class="custom-carousel">
-    <slide *ngFor="let url of imageUrlsArchetypes; let i = index" class="carousel-item" >
-      <img [src]="url" class="carousel-image">
-    </slide>
-  </carousel>
-</div>
+<div class="carousels-container">
+  <div class="carousel-wrapper">
+    <p-carousel [value]="imageUrlsArchetypes" [numVisible]="1" [numScroll]="1" [circular]="true" [showIndicators]="false" [responsiveOptions]="responsiveOptions">
+      <ng-template let-imageUrl pTemplate="item">
+        <div class="carousel-item">
+          <img [src]="imageUrl" class="carousel-image">
+        </div>
+      </ng-template>
+    </p-carousel>  
+    <div class="title-container">
+      <a routerLink="/archetypes">
+        <h2>Archetypes</h2>
+      </a>
+    </div>
+  </div>
 
-<div class='Documentations'>
-<a routerLink='/Deployments'>
-<h2>Deployments</h2>
-</a>
-  <carousel [itemsPerSlide]="4" [singleSlideOffset]="true" [interval]="0" [showIndicators]="false" class="custom-carousel">
-    <slide *ngFor="let url of imageUrlsDeployments; let i = index" class="carousel-item" >
-      <img [src]="url" class="carousel-image">
-    </slide>
-  </carousel>
-</div>
+  <div class="carousel-wrapper">
+    <p-carousel [value]="imageUrlsDeployments" [numVisible]="1" [numScroll]="1" [circular]="true" [showIndicators]="false" [responsiveOptions]="responsiveOptions">
+      <ng-template let-imageUrl pTemplate="item">
+        <div class="carousel-item">
+          <img [src]="imageUrl" class="carousel-image">
+        </div>
+      </ng-template>
+    </p-carousel>  
+    <div class="title-container">
+      <a routerLink="/deployments">
+        <h2>Deployments</h2>
+      </a>
+    </div>
 
-<div class='Documentations'>
-<a routerLink='/Drawings'>
-<h2>Drawings</h2>
-</a>
-<carousel [itemsPerSlide]="4" [singleSlideOffset]="true" [interval]="0" [showIndicators]="false" class="custom-carousel">
-    <slide *ngFor="let url of imageUrlsDrawings; let i = index" class="carousel-item" >
-      <img [src]="url" class="carousel-image">
-    </slide>
-  </carousel>
-</div>
+  </div>
 
-<!-- <div class='Documentations'>
-<a routerLink='/Transcriptions'>
-<h2>Transcriptions</h2>
-</a>
-   <carousel [itemsPerSlide]="4" [singleSlideOffset]="true" [interval]="0" [showIndicators]="false" class="custom-carousel">
-    <slide *ngFor="let url of imageUrlsTranscriptions; let i = index" class="carousel-item" >
-      <img [src]="url" class="carousel-image">
-    </slide>
-  </carousel>
-</div> -->
+  <div class="carousel-wrapper">
+    <p-carousel [value]="imageUrlsDrawings" [numVisible]="1" [numScroll]="1" [circular]="true" [showIndicators]="false" [responsiveOptions]="responsiveOptions">
+      <ng-template let-imageUrl pTemplate="item">
+        <div class="carousel-item">
+          <img [src]="imageUrl" class="carousel-image">
+        </div>
+      </ng-template>
+    </p-carousel>  
+    <div class="title-container">
+      <a routerLink="/drawings">
+        <h2>Drawings</h2>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="carousel-wrapper">
+    <p-carousel [value]="imageUrlsTranscriptions" [numVisible]="1" [numScroll]="1" [circular]="true" [showIndicators]="false" [responsiveOptions]="responsiveOptions">
+      <ng-template let-imageUrl pTemplate="item">
+        <div class="carousel-item">
+          <img [src]="imageUrl" class="carousel-image">
+        </div>
+      </ng-template>
+    </p-carousel>  
+    <div class="title-container">
+      <a routerLink="/transcriptions">
+        <h2>Transcriptions</h2>
+      </a>
+    </div>
+  </div>

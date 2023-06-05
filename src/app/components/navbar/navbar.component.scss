@@ -20,12 +20,27 @@
 
     li {
       margin-right: 20px;
+      font-size: 24px;
+      transition: color 0.2s ease-in-out;
 
       a {
-        color: #000;
         display: block;
+        color: #000;
         text-decoration: none;
       }
+
+      &:hover a {
+        color: #8B0000;
+      }
+    }
+
+      &.active .burger-dropdown {
+      display: block;
+    }
+
+    &.active .burger-icon {
+      transform: rotate(90deg);
+    }
     }
   }
 
@@ -62,29 +77,59 @@
           margin-right: 20px;
           font-size: 24px;
           transition: color 0.2s ease-in-out;
-
+    
           a {
             display: block;
             color: #000;
             text-decoration: none;
           }
-
+    
           &:hover a {
             color: #8B0000;
           }
         }
+    
+          &.active .burger-dropdown {
+          display: block;
+        }
+    
+        &.active .burger-icon {
+          transform: rotate(90deg);
+        }
       }
     }
+    
+  }
 
-      &.active .burger-dropdown {
+
+  @media only screen and (min-width: 768px) {
+    .navbar-list {
+      display: flex;
+    }
+
+    .navbar-burger {
+      display: none;
+    }
+
+    .navbar-dropdown {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    .navbar-list{
       display: block;
     }
 
-    &.active .burger-icon {
-      transform: rotate(90deg);
+    .navbar-burger{
+      display: flex;
+    }
+
+    .burger-dropdown{
+      display: block;
     }
   }
-
+    
+  
 
   @keyframes dropdown-animation {
     0% {
@@ -96,4 +141,4 @@
       opacity: 1;
     }
   }
-}
+

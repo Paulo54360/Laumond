@@ -1,144 +1,106 @@
-.navbar {
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/themes/saga-blue/theme.css";
+@import "~primeng/resources/primeng.min.css";
+
+:host ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link{
+    border-radius: 0px;
+}
+
+:host ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text{
+color: #8B0000;
+
+}
+*{
+  font-family: 'DM Sans', sans-serif;
+  color: #525252;
+  text-decoration: none;
+}
+
+:host ::ng-deep .p-menubar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  padding: 20px;
-
-  .navbar-logo {
-    color: #000;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  .navbar-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
+  align-items: right;
+  background-color: #ffffff00;
+  border: none;
+  .p-menubar-root-list {
     li {
       margin-right: 20px;
       font-size: 24px;
       transition: color 0.2s ease-in-out;
-
       a {
-        display: block;
-        color: #000;
+        color: #525252;
         text-decoration: none;
+        &:hover {
+          color: #8B0000;
+        }
       }
-
-      &:hover a {
-        color: #8B0000;
-      }
-    }
-
-      &.active .burger-dropdown {
-      display: block;
-    }
-
-    &.active .burger-icon {
-      transform: rotate(90deg);
-    }
     }
   }
+}
 
-  .navbar-burger {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
+// aggrandi la taille de la class Laumond 
+a{
+  padding-right: 20px;
+  font-size: 34px;
+}
 
-    .burger-icon {
-      font-size: 24px;
-      color: #000;
-      cursor: pointer;
-    }
+p-menubar {
+    li {
+        margin-right: 20px;
+        font-size: 24px;
+        transition: color 0.2s ease-in-out;
 
-    .burger-dropdown {
-      animation: dropdown-animation .5s ease-in-out;
-      display: none;
-      padding: 20px;
-      position: absolute;
-      right: 40px;
-      top: -20px;
-
-      .burger-menu {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-        li {
-          margin-right: 20px;
-          font-size: 24px;
-          transition: color 0.2s ease-in-out;
-    
-          a {
+        a {
             display: block;
             color: #000;
             text-decoration: none;
-          }
-    
-          &:hover a {
+        }
+
+        &:hover a {
             color: #8B0000;
-          }
         }
-    
-          &.active .burger-dropdown {
-          display: block;
+    }
+}
+
+p-sidebar {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      font-size: 16px; // base size for mobile
+  
+      @media screen and (min-width: 768px) {
+        font-size: 24px; // larger size for tablets and above
+      }
+  
+      li {
+        margin-bottom: 20px;
+  
+        a {
+          color: #000;
+          text-decoration: none;
         }
-    
-        &.active .burger-icon {
-          transform: rotate(90deg);
+  
+        &:hover a {
+          color: #8B0000;
         }
       }
     }
-    
   }
-
-
-  @media only screen and (min-width: 768px) {
-    .navbar-list {
-      display: flex;
-    }
-
-    .navbar-burger {
-      display: none;
-    }
-
-    .navbar-dropdown {
-      display: none;
-    }
-  }
-  @media only screen and (max-width: 767px){
-    .navbar-list{
-      display: block;
-    }
-
-    .navbar-burger{
-      display: flex;
-    }
-
-    .burger-dropdown{
-      display: block;
-    }
-  }
-    
   
 
-  @keyframes dropdown-animation {
-    0% {
-      transform: translateY(-20px);
-      opacity: 0;
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    .fas.fa-bars {
+      font-size: 54px;
     }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
+    &.rotated {
+      transform: rotate(90deg);
+      transition: transform 0.2s ease-in-out;
     }
-  }
-
+    @media screen and (min-width: 768px) {
+        font-size: 32px; // larger size for tablets and above
+      }
+    }
+  

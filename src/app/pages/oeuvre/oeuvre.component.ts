@@ -39,8 +39,8 @@ export class OeuvreComponent {
             numScroll: 3
         },
         {
-            breakpoint: '1220px',
-            numVisible: 2,
+            breakpoint: '760px',
+            numVisible: 1,
             numScroll: 2
         },
         {

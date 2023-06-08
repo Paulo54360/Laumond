@@ -20,6 +20,9 @@ import { ArchetypesComponent } from './components/archetypes/archetypes.componen
 import { DeploymentsComponent } from './components/deployments/deployments.component';
 import { DrawingsComponent } from './components/drawings/drawings.component';
 import { CarouselModule } from 'primeng/carousel';
+import { MenubarModule } from 'primeng/menubar';
+import { SidebarModule } from 'primeng/sidebar';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +45,8 @@ import { CarouselModule } from 'primeng/carousel';
     CarouselModule,
     FontAwesomeModule,
     MatPaginatorModule,
+    MenubarModule,
+    SidebarModule,
     NgbModule
   ],
   providers: [],

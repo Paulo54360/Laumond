@@ -1,23 +1,44 @@
-<nav class="navbar">
-  <a class="navbar-logo" routerLink="">Patrick Laumond</a>
-  <ul class="navbar-list">
-    <li><a routerLink="/metahisme">MétaHisme</a></li>
-    <li><a routerLink="/oeuvre">Œuvre</a></li>
-    <li><a routerLink="/news">Actualité</a></li>
-    <li><a routerLink="/contact">Contact</a></li>
-    <li><a routerLink="/biographie">Biographie</a></li>
-  </ul>
+<!-- <p-menubar [model]="items" *ngIf="!isMobile">
+  <ng-template pTemplate="end">
+      <a class="Laumond" routerLink="">
+        Patrick Laumond
+      </a>
+  </ng-template>
+</p-menubar>
 
-  <div class="navbar-burger" (click)="toggleBurgerMenu()" [ngClass]="{ 'active': active }">
+
+<p-sidebar [(visible)]="visibleSidebar" [baseZIndex]="1000" *ngIf="isMobile" [class.rotated]="visibleSidebar">
+  <ul>
+    <li *ngFor="let item of items">
+        <a [routerLink]="item.routerLink" >{{item.label}}</a>
+      </li>
+    </ul>
+  </p-sidebar>
+
+<button type="button" (click)="visibleSidebar = true" *ngIf="isMobile" [class.rotated]="visibleSidebar">
     <fa-icon [icon]="faBars" class="burger-icon"></fa-icon>
-    <div class="burger-dropdown" [ngClass]="{ 'active': showDropdown }">
-      <ul class="burger-menu">
-        <li><a routerLink="/metahisme">MétaHisme</a></li>
-        <li><a routerLink="/oeuvre">Œuvre</a></li>
-        <li><a routerLink="/news">Actualité</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
-        <li><a routerLink="/biographie">Biographie</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+</button> -->
+<p-menubar [model]="items" *ngIf="!isMobile">
+    <ng-template pTemplate="end">
+        <a class="Laumond" routerLink="">
+            Patrick Laumond
+        </a>
+    </ng-template>
+</p-menubar>
+
+<p-sidebar [(visible)]="visibleSidebar" [baseZIndex]="10000" [style]="{width: '200px'}" *ngIf="isMobile">
+    <ul>
+        <li *ngFor="let item of items">
+            <a [routerLink]="item.routerLink">{{item.label}}</a>
+        </li>
+    </ul>
+    <ng-template pTemplate="end">
+      <a class="Laumond" routerLink="">
+          Patrick Laumond
+      </a>
+  </ng-template>
+</p-sidebar>
+
+<button pButton type="button" (click)="visibleSidebar = true" *ngIf="isMobile" class="pi pi-bars">
+  
+</button>

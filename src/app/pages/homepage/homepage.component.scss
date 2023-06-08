@@ -3,7 +3,11 @@
   display: flex;
   flex-direction: column;
   padding: 2%;
-
+    .video{
+      width: 100%;
+      height: 80vh;
+    }
+  
   .titre{
     margin-top: 30px;
   }

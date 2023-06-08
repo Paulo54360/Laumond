@@ -1,0 +1,37 @@
+.footer {
+    background-color: #f5f5f5;
+    position: static;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.footer-text {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-link {
+    display: inline-block;
+    margin-right: 10px;
+    color: #333;
+    font-size: 20px;
+}
+
+.social-link i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+/* Utilisez la bibliothèque Font Awesome pour les icônes */
+@import '~@fortawesome/fontawesome-free/css/all.min.css';

@@ -22,6 +22,7 @@ import { DrawingsComponent } from './components/drawings/drawings.component';
 import { CarouselModule } from 'primeng/carousel';
 import { MenubarModule } from 'primeng/menubar';
 import { SidebarModule } from 'primeng/sidebar';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { SidebarModule } from 'primeng/sidebar';
     ContactComponent,
     ArchetypesComponent,
     DeploymentsComponent,
-    DrawingsComponent
+    DrawingsComponent,
+    FooterComponent
   ],
   imports: [
     AppRoutingModule,

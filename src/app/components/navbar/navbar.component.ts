@@ -25,9 +25,9 @@ export class NavbarComponent implements OnInit {
     ];
 
     window.addEventListener('resize', () => {
-      this.isMobile = window.innerWidth < 1024;
+      this.isMobile = window.innerWidth < 768;
     }, false);
 
-    this.isMobile = window.innerWidth < 1024;
+    this.isMobile = window.innerWidth < 760;
   }
 }

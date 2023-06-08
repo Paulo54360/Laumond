@@ -12,11 +12,11 @@
             <a [routerLink]="item.routerLink">{{item.label}}</a>
         </li>
     </ul>
-    <ng-template pTemplate="end">
+
       <a class="Laumond" routerLink="">
           Patrick Laumond
       </a>
-  </ng-template>
+
 </p-sidebar>
 
 <button pButton type="button" (click)="visibleSidebar = true" *ngIf="isMobile" class="pi pi-bars">

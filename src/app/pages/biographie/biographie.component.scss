@@ -54,4 +54,19 @@
       }
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+
+    .nav-menu {
+      position: static;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .text-container {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
 }

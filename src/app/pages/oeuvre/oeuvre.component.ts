@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -19,10 +20,10 @@ export class OeuvreComponent {
     
     for (let i = 1; i <= 4; i++) {
       const num = i.toString().padStart(2, '0');
-      const UrlsArchetypes = `api/Archetypes/03/${num}.jpg`;
-      const UrlsDeployments = `api/Deployments/01/${num}.jpg`;
-      const UrlsDrawings = `api/Drawings+/01/${num}.jpg`;
-      const UrlsTranscriptions = `api/Transcriptions/02/${num}.jpg`;
+      const UrlsArchetypes = `${environment.apiUrl}/Archetypes/03/${num}.jpg`;
+      const UrlsDeployments = `${environment.apiUrl}/Deployments/01/${num}.jpg`;
+      const UrlsDrawings = `${environment.apiUrl}/Drawings+/01/${num}.jpg`;
+      const UrlsTranscriptions = `${environment.apiUrl}/Transcriptions/02/${num}.jpg`;
       this.imageUrlsArchetypes.push(UrlsArchetypes);
       this.imageUrlsDeployments.push(UrlsDeployments);
       this.imageUrlsDrawings.push(UrlsDrawings);

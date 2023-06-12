@@ -31,14 +31,17 @@
             }
         }
         .carousel-image {
+            display: flex;
+            align-items: center;
             width: 100%;
-            height : 40vh;
+            height : auto;
+            max-height: 200px;
             object-fit: fill;
             margin-bottom: 20 px;
         }
     }
   
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1440px) {
         .carousel-wrapper {
             width: 100%;
         }

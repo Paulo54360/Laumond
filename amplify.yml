@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - rm -rf $CACHE_DIR
         - npm ci
         - npm install -g @angular/cli
 

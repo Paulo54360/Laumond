@@ -20,7 +20,7 @@ export class OeuvreComponent {
     
     for (let i = 1; i <= 4; i++) {
       const num = i.toString().padStart(2, '0');
-      const UrlsArchetypes = ` https://plaumondpicture.s3.eu-west-3.amazonaws.com/Archetypes/03/${num}.jpg`;
+      const UrlsArchetypes = `https://plaumondpicture.s3.eu-west-3.amazonaws.com/Archetypes/03/${num}.jpg`;
       const UrlsDeployments = `${environment.apiUrl}/Deployments/01/${num}.jpg`;
       const UrlsDrawings = `${environment.apiUrl}/Drawings+/01/${num}.jpg`;
       const UrlsTranscriptions = `${environment.apiUrl}/Transcriptions/02/${num}.jpg`;

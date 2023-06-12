@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AmplifyAuthenticatorModule } from "@aws-amplify/ui-angular";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +26,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { FooterComponent } from './components/footer/footer.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +44,7 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     AppRoutingModule,
+    AmplifyAuthenticatorModule,
     BrowserModule,
     BrowserAnimationsModule,
     CarouselModule,

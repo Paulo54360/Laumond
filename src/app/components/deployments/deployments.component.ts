@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 interface Titles {
   [key: string]: string;
@@ -31,8 +32,8 @@ export class DeploymentsComponent {
 
       for (let j = range[0]; j <= range[1]; j++) {
         const num = j.toString().padStart(2, '0');
-        const imageUrl = `/api/Deployments/${subfolder}/${num}.jpg`;
-        const textUrl = `/api/Deployments/${subfolder}/${num}.txt`;
+        const imageUrl = `${environment.apiUrl}/Deployments/${subfolder}/${num}.jpg`;
+        const textUrl = `${environment.apiUrl}/Deployments/${subfolder}/${num}.txt`;
 
         const text = await this.fetchTextContent(textUrl);
         this.imageUrls.push(imageUrl);

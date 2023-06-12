@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 interface Titles {
   [key: string]: string;
@@ -30,8 +31,8 @@ export class DrawingsComponent {
 
       for (let j = range[0]; j <= range[1]; j++) {
         const num = j.toString().padStart(2, '0');
-        const imageUrl = `/api/Drawings+/${subfolder}/${num}.jpg`;
-        const textUrl = `/api/Drawings+/${subfolder}/${num}.txt`;
+        const imageUrl = `${environment.apiUrl}/Drawings+/${subfolder}/${num}.jpg`;
+        const textUrl = `${environment.apiUrl}/Drawings+/${subfolder}/${num}.txt`;
 
         const text = await this.fetchTextContent(textUrl);
         this.imageUrls.push(imageUrl);

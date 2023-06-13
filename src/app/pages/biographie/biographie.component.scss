@@ -11,28 +11,17 @@
     a {
       color: #000;
       font-weight: bold;
-      margin: 10px 0;
-
-      &:hover {
-        color: #cc0000;
-      }
-    }
-    .nav-menu a {
-      color: #000;
-      font-weight: bold;
-      margin: 10px 0;
       transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+      padding: 20px;
 
       &:hover {
         color: #cc0000;
         transform: translateY(-5px);
       }
     }
-
     .nav-menu a:hover {
       transform: translateY(-5px);
     }
-
   }
 
   .text-container {

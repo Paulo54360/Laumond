@@ -31,7 +31,7 @@ export class ArchetypesComponent implements OnInit {
 
       for (let j = range[0]; j <= range[1]; j++) {
         const num = j.toString().padStart(2, '0');
-        const imageUrl = `${environment.apiUrl}/Archetypes/${subfolder}/${num}.jpg`;
+        const imageUrl = `${environment.apiUrl}/Archetypes/${subfolder}/${num}.jpg`;        
         const textUrl = `${environment.apiUrl}/Archetypes/${subfolder}/${num}.txt`;
 
         const text = await this.fetchTextContent(textUrl);
@@ -49,17 +49,19 @@ export class ArchetypesComponent implements OnInit {
         reader.onloadend = () => resolve(reader.result as string);
         reader.onerror = reject;
         reader.readAsText(blob, 'utf-8');
+        
       }))
       .catch(error => {
         console.error(`Erreur lors de la récupération du contenu du fichier ${url}:`, error);
         throw new Error('Erreur lors de la récupération du contenu du fichier');
       });
-  }
-
-
-
-  openModal(index: number) {
-    this.currentImageIndex = index;
+    }
+    
+    
+    
+    openModal(index: number) {
+      this.currentImageIndex = index;
+      console.log(`Contenu du fichier ${this.imageUrls} récupéré`);
   }
 
   closeModal() {

@@ -7,10 +7,11 @@
 
 <div class="image-gallery">
   <div class="image-gallery-item"
-       *ngFor="let url of imageUrls | slice:(paginator.pageIndex)*(paginator.pageSize):((paginator.pageIndex + 1)*(paginator.pageSize)); let i = index">
-    <img [src]="url" [alt]="titles[url]" (click)="openModal(i)" />
-    <h2>{{ titles[url] }}</h2>
-  </div>
+  *ngFor="let url of imageUrls | slice:(paginator.pageIndex)*(paginator.pageSize):((paginator.pageIndex + 1)*(paginator.pageSize)); let i = index">
+<img [src]="url" [alt]="titles[url]" (click)="openModal(i + paginator.pageIndex * paginator.pageSize)" />
+<h2>{{ titles[url] }}</h2>
+</div>
+
 
   <!-- Modal -->
   <div class="modal" [class.show]="currentImageIndex !== null" (click)="closeModal()">

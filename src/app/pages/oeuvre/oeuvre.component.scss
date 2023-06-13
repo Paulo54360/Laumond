@@ -7,7 +7,7 @@
     max-width: 100%;
     .carousel-wrapper {
         box-sizing: border-box;
-        width: 48%;
+        width: 100%;
         margin-bottom: 20px;
         .carousel-item {
             display: flex;
@@ -17,15 +17,17 @@
 
         }
         .title-container {
-            text-align: center;
+            margin-left: 10px;
+            text-align: start;
             a {
                 text-decoration: none;
                  :hover {
                     text-decoration: underline #cc0000;
                 }
                 h2 {
-                    color: #999;
-                    font-size: 1.15em;
+                    margin-left: 3%;
+                    color: #525252;
+                    font-size: 1.2em;
                     font-weight: bold;
                 }
             }
@@ -34,22 +36,9 @@
             display: flex;
             align-items: center;
             width: 100%;
-            height : auto;
-            max-height: 200px;
-            object-fit: fill;
+            height : 400px;
+            object-fit: cover;
             margin-bottom: 20 px;
-        }
-    }
-  
-    @media only screen and (max-width: 1440px) {
-        .carousel-wrapper {
-            width: 100%;
-        }
-        .title-container{
-            a{
-                font-size: 1.5em
-
-            }
         }
     }
 }

@@ -20,8 +20,8 @@ export class NavbarComponent implements OnInit {
     this.items = [
       {label: 'MétaHisme', routerLink: '/metahisme'},
       {label: 'Œuvre', routerLink: '/oeuvre'},
-      {label: 'Actualité', routerLink: '/news'},
-      {label: 'Biographie', routerLink: '/biographie'}
+      {label: 'Biographie', routerLink: '/biographie'},
+      {label: 'Actualité', routerLink: '/news'}
     ];
 
     window.addEventListener('resize', () => {

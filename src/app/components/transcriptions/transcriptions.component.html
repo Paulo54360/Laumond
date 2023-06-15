@@ -1,0 +1,22 @@
+<mat-paginator [length]="imageUrls.length"
+               [pageSize]="10"
+               [pageSizeOptions]="[25,50,75,100]"
+               #paginator
+               aria-label="Select page">
+</mat-paginator>
+
+<div class="image-gallery">
+  <div class="image-gallery-item"
+       *ngFor="let url of imageUrls | slice:(paginator.pageIndex)*(paginator.pageSize):((paginator.pageIndex + 1)*(paginator.pageSize)); let i = index">
+    <img [src]="url" [alt]="titles[url]" (click)="openModal(i)" />
+    <h2>{{ titles[url] }}</h2>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" [class.show]="currentImageIndex !== null" (click)="closeModal()">
+    <!-- Image container -->
+    <div class="modal-content">
+      <img class="modal-image" [src]="currentImageIndex !== null ? imageUrls[currentImageIndex] : ''" [alt]="currentImageIndex !== null ? titles[imageUrls[currentImageIndex]] : ''" />
+    </div>
+  </div></div>
+

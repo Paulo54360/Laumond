@@ -15,7 +15,7 @@ import { BiographieComponent } from 'src/app/pages/biographie/biographie.compone
 import { MetahismeComponent } from 'src/app/pages/metahisme/metahisme.component';
 import { OeuvreComponent } from 'src/app/pages/oeuvre/oeuvre.component';
 import { NewsComponent } from 'src/app/pages/news/news.component';
-import { ContactComponent } from 'src/app/pages/contact/contact.component';
+
 import { ArchetypesComponent } from './components/archetypes/archetypes.component';
 
 import { DeploymentsComponent } from './components/deployments/deployments.component';
@@ -24,6 +24,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { MenubarModule } from 'primeng/menubar';
 import { SidebarModule } from 'primeng/sidebar';
 import { FooterComponent } from './components/footer/footer.component';
+import { TranscriptionsComponent } from './components/transcriptions/transcriptions.component';
 
 
 
@@ -36,11 +37,11 @@ import { FooterComponent } from './components/footer/footer.component';
     MetahismeComponent,
     OeuvreComponent,
     NewsComponent,
-    ContactComponent,
     ArchetypesComponent,
     DeploymentsComponent,
     DrawingsComponent,
-    FooterComponent
+    FooterComponent,
+    TranscriptionsComponent
   ],
   imports: [
     AppRoutingModule,

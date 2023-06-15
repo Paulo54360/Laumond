@@ -15,7 +15,19 @@
     color: #999999;
     font-size: 0.8em;
     font-style: italic;
-    text-align: right;
+    text-align: left;
     
+  }
+  #citation{
+    width: 90%;
+    justify-content: center;
+    font-style: italic;
+    margin: 1em;
+    padding-left: 2%;
+    
+    #Edith{
+      font-style: normal;
+      font-weight: bold;
+    }
   }
 }

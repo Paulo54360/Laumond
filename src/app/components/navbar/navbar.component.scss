@@ -19,10 +19,10 @@ color: #8B0000;
 :host ::ng-deep .p-menubar {
 
   display: flex;
-  margin-left: 3%;
   margin-bottom: 3%;
+  padding-left: 1.5%;
   align-items: right;
-  background-color: #ffffff00;
+  background-color: #ffffff;
   border: none;
   .p-menubar-root-list {
     li {
@@ -47,6 +47,10 @@ a{
 }
 
 p-menubar {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+
     li {
         position: fixed;
         margin-right: 20px;

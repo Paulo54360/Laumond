@@ -1,73 +1,72 @@
 .image-gallery {
-    display: grid;
-    gap: 100px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: 50px;
-  
-    .image-gallery-item {
-      min-height: 300px;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      
-      img {
-        cursor: pointer;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        max-width: 100%;
-        max-height: 100%;
-        flex-grow: 1;
-      }
-  
-      h2 {
-        color: #999;
-        font-size: 1em;
-        margin: auto 0;
-        margin-top: 15px;
-        white-space: wrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 100%;
-        text-align: center;
-      }
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 15px;
+
+  .image-gallery-item {
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      cursor: pointer;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      max-width: 100%;
+      max-height: 100%;
+      flex-grow: 1;
+    }
+
+    h2 {
+      color: #525252;
+      font-size: 11px;
+      margin: auto 0;
+      margin-top: 15px;
+      white-space: wrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      text-align: start;
     }
   }
-  
-  .modal {
-    background-color: #fffcfcd7;
-    display: none;
-    height: 100%;
-    left: 0;
-    overflow: auto;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-  
-    .modal-content {
-      align-items: center;
-      display: flex;
-      height: 90%;  // Modifié pour occuper plus d'espace sur l'écran
-      justify-content: center;
-      margin: auto;
-      width: 90%;   // Modifié pour occuper plus d'espace sur l'écran
-    }
-  
-    .modal-image {
-      max-height: 90vh;
-      max-width: 90vw;
-      border-radius: 5px;
-    }
-  
-    &.show {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      
-      .close {
-        display: inline-block; // Afficher la croix quand le modal est ouvert
-      }
+}
+
+.modal {
+  background-color: #fffcfcd7;
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  .modal-content {
+    align-items: center;
+    display: flex;
+    height: 90%;  // Modifié pour occuper plus d'espace sur l'écran
+    justify-content: center;
+    margin: auto;
+    width: 90%;   // Modifié pour occuper plus d'espace sur l'écran
+  }
+
+  .modal-image {
+    max-height: 90vh;
+    max-width: 90vw;
+    border-radius:5px;
+  }
+
+  &.show {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+    .close {
+      display: inline-block; // Afficher la croix quand le modal est ouvert
     }
   }
+}

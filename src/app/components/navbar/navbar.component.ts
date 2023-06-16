@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MenuItem} from 'primeng/api';
+import { MenuItem } from 'primeng/api';
 import { TranslateService } from '@ngx-translate/core';
 import { PrimeNGConfig } from 'primeng/api';
 
@@ -9,7 +9,6 @@ import { PrimeNGConfig } from 'primeng/api';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
   items!: MenuItem[];
   visibleSidebar: boolean = false;
   isMobile: boolean = false;
@@ -22,10 +21,10 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.primengConfig.ripple = true;
     this.items = [
-      {label: 'MétaHisme', routerLink: '/metahisme'},
-      {label: 'Œuvre', routerLink: '/oeuvre'},
-      {label: 'Biographie', routerLink: '/biographie'},
-      {label: 'Actualité', routerLink: '/news'}
+      { label: 'MétaHisme', icon: 'pi pi-home', routerLink: '/metahisme' },
+      { label: 'Oeuvres', icon: 'pi pi-image', routerLink: '/oeuvre' },
+      { label: 'Biographie', icon: 'pi pi-user', routerLink: '/biographie' },
+      { label: 'Actualités', icon: 'pi pi-calendar', routerLink: '/news' }
     ];
 
     window.addEventListener('resize', () => {
@@ -34,11 +33,13 @@ export class NavbarComponent implements OnInit {
 
     this.isMobile = window.innerWidth < 760;
   }
+
   useLanguage(language: string) {
     this.translate.use(language);
   }
+
   switchLanguage() {
-    if (this.currentLang == 'fr') {
+    if (this.currentLang === 'fr') {
       this.translate.use('en');
       this.currentLang = 'en';
     } else {
@@ -46,5 +47,4 @@ export class NavbarComponent implements OnInit {
       this.currentLang = 'fr';
     }
   }
-  
 }

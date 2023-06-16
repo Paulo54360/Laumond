@@ -52,7 +52,8 @@ p-menubar {
   top: 0;
 
     li {
-        position: fixed;
+        display: flex;
+        flex-direction: row;
         margin-right: 20px;
         font-size: 24px;
         transition: color 0.2s ease-in-out;
@@ -96,6 +97,11 @@ p-sidebar {
           color: #8B0000;
         }
       }
+    }
+    img{
+      margin-top: 10px;
+      width: 25px;
+      height: 20px;
     }
   }
   

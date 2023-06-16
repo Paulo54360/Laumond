@@ -1,28 +1,40 @@
-<p-menubar [model]="items" *ngIf="!isMobile">
+<p-menubar [model]="items" [style]="{ width: '100%' }">
     <ng-template pTemplate="start">
-        <a class="Laumond" routerLink="">
-            Patrick Laumond
-        </a>
+      <a class="Laumond" routerLink="">
+        Patrick Laumond
+      </a>
     </ng-template>
     <ng-template pTemplate="end">
-        <button (click)="switchLanguage()">
-            <img *ngIf="currentLang == 'fr'" src="assets/usaFlag.png" alt="EN">
-            <img *ngIf="currentLang == 'en'" src="assets/franceFlag.png" alt="FR">
-          </button>
-          
+      <button (click)="switchLanguage()">
+        <img *ngIf="currentLang === 'fr'" src="assets/usaFlag.png" alt="EN">
+        <img *ngIf="currentLang === 'en'" src="assets/franceFlag.png" alt="FR">
+      </button>
     </ng-template>
-</p-menubar>
-
+    <ng-template pTemplate="group">
+      <ul>
+        <li *ngFor="let item of items" routerLinkActive="active">
+          <a [routerLink]="item.routerLink">{{ item.label || '' | translate }}</a>
+        </li>
+      </ul>
+    </ng-template>
+  </p-menubar>
+  
+  
+  
 <p-sidebar [(visible)]="visibleSidebar" [baseZIndex]="10000" [style]="{width: '200px'}" *ngIf="isMobile">
     <ul>
         <li *ngFor="let item of items">
-            <a [routerLink]="item.routerLink">{{item.label}}</a>
-        </li>
+       </li>
     </ul>
-
-      <a class="Laumond" routerLink="">
-          Patrick Laumond
-      </a>
+    <a class="Laumond" routerLink="">
+        Patrick Laumond
+    </a>
+     <ng-template pTemplate="end">
+        <button (click)="switchLanguage()">
+            <img *ngIf="currentLang == 'fr'" src="assets/usaFlag.png" alt="EN">
+            <img *ngIf="currentLang == 'en'" src="assets/franceFlag.png" alt="FR">
+        </button>
+    </ng-template>
 
 </p-sidebar>
 

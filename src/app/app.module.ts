@@ -30,6 +30,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TranscriptionsComponent } from './components/transcriptions/transcriptions.component';
 
 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -70,7 +73,3 @@ import { TranscriptionsComponent } from './components/transcriptions/transcripti
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
-}

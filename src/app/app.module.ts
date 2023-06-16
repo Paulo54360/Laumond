@@ -4,6 +4,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AmplifyAuthenticatorModule } from "@aws-amplify/ui-angular";
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -46,6 +49,7 @@ import { TranscriptionsComponent } from './components/transcriptions/transcripti
   imports: [
     AppRoutingModule,
     AmplifyAuthenticatorModule,
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     CarouselModule,
@@ -53,10 +57,20 @@ import { TranscriptionsComponent } from './components/transcriptions/transcripti
     MatPaginatorModule,
     MenubarModule,
     SidebarModule,
-    NgbModule
+    NgbModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      }
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

@@ -24,7 +24,8 @@
   "paths": {
     "@components/*": ["src/app/components/*"],
     "@services/*": ["app/services/*"],
-    "@environments/*": ["environments/*"],
+    "@assets/*": ["src/assets/*"],
+    "@environments/*": ["src/environments/*"],
 
   },
   },

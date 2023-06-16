@@ -4,6 +4,13 @@
             Patrick Laumond
         </a>
     </ng-template>
+    <ng-template pTemplate="end">
+        <button (click)="switchLanguage()">
+            <img *ngIf="currentLang == 'fr'" src="assets/usaFlag.png" alt="EN">
+            <img *ngIf="currentLang == 'en'" src="assets/franceFlag.png" alt="FR">
+          </button>
+          
+    </ng-template>
 </p-menubar>
 
 <p-sidebar [(visible)]="visibleSidebar" [baseZIndex]="10000" [style]="{width: '200px'}" *ngIf="isMobile">

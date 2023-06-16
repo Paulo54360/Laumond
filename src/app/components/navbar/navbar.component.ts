@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
+import { TranslateService } from '@ngx-translate/core';
 import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
@@ -12,8 +13,11 @@ export class NavbarComponent implements OnInit {
   items!: MenuItem[];
   visibleSidebar: boolean = false;
   isMobile: boolean = false;
+  currentLang = 'fr';
 
-  constructor(private primengConfig: PrimeNGConfig) {}
+  constructor(private primengConfig: PrimeNGConfig, private translate: TranslateService) {
+    translate.setDefaultLang(this.currentLang);
+  }
 
   ngOnInit() {
     this.primengConfig.ripple = true;
@@ -30,4 +34,17 @@ export class NavbarComponent implements OnInit {
 
     this.isMobile = window.innerWidth < 760;
   }
+  useLanguage(language: string) {
+    this.translate.use(language);
+  }
+  switchLanguage() {
+    if (this.currentLang == 'fr') {
+      this.translate.use('en');
+      this.currentLang = 'en';
+    } else {
+      this.translate.use('fr');
+      this.currentLang = 'fr';
+    }
+  }
+  
 }

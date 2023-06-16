@@ -1,9 +1,9 @@
 {
     "navbar": {
-        "metaHisme": "MetaHism",
-        "oeuvres": "Artworks",
-        "biographie": "Biography",
-        "actualites": "News"
+        "MétaHisme": "MetaHism",
+        "Oeuvres": "Artworks",
+        "Biographie": "Biography",
+        "Actualités": "News"
    },
 
     "Oeuvres": {

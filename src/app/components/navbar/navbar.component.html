@@ -1,8 +1,11 @@
-<p-menubar [model]="items" [style]="{ width: '100%' }">
-    <ng-template pTemplate="start">
+<p-menubar [model]="translatedItems" *ngIf="!isMobile || visibleSidebar">
+      <ng-template pTemplate="start">
       <a class="Laumond" routerLink="">
         Patrick Laumond
       </a>
+    </ng-template>
+    <ng-template pTemplate="items" let-item>
+      <a [routerLink]="item.routerLink">{{ 'navbar.' + item.label | translate }}</a>
     </ng-template>
     <ng-template pTemplate="end">
       <button (click)="switchLanguage()">
@@ -10,34 +13,29 @@
         <img *ngIf="currentLang === 'en'" src="assets/franceFlag.png" alt="FR">
       </button>
     </ng-template>
-    <ng-template pTemplate="group">
-      <ul>
-        <li *ngFor="let item of items" routerLinkActive="active">
-          <a [routerLink]="item.routerLink">{{ item.label || '' | translate }}</a>
-        </li>
-      </ul>
-    </ng-template>
   </p-menubar>
   
-  
-  
-<p-sidebar [(visible)]="visibleSidebar" [baseZIndex]="10000" [style]="{width: '200px'}" *ngIf="isMobile">
+  <p-sidebar [(visible)]="visibleSidebar" [baseZIndex]="10000" [style]="{width: '200px'}" *ngIf="isMobile || visibleSidebar">
     <ul>
-        <li *ngFor="let item of items">
-       </li>
+            <button (click)="switchLanguage()">
+              <img *ngIf="currentLang == 'fr'" src="assets/usaFlag.png" alt="EN">
+              <img *ngIf="currentLang == 'en'" src="assets/franceFlag.png" alt="FR">
+            </button>
+      <li *ngFor="let item of translatedItems">
+        <a [routerLink]="item.routerLink">{{ item.label }}</a>
+      </li>
     </ul>
     <a class="Laumond" routerLink="">
-        Patrick Laumond
+      Patrick Laumond
     </a>
-     <ng-template pTemplate="end">
-        <button (click)="switchLanguage()">
-            <img *ngIf="currentLang == 'fr'" src="assets/usaFlag.png" alt="EN">
-            <img *ngIf="currentLang == 'en'" src="assets/franceFlag.png" alt="FR">
-        </button>
+    <ng-template pTemplate="end">
+      <button (click)="switchLanguage()">
+        <img *ngIf="currentLang == 'fr'" src="assets/usaFlag.png" alt="EN">
+        <img *ngIf="currentLang == 'en'" src="assets/franceFlag.png" alt="FR">
+      </button>
     </ng-template>
-
-</p-sidebar>
-
+  </p-sidebar>
+  
 <button pButton type="button" (click)="visibleSidebar = true" *ngIf="isMobile" class="pi pi-bars">
   
 </button>

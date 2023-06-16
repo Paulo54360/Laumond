@@ -1,9 +1,9 @@
 {
     "navbar": {
-        "metaHisme": "MétaHisme",
-        "oeuvres": "Œuvres",
-        "biographie": "Biographie",
-        "actualites": "Actualités"
+        "MétaHisme": "MétaHisme",
+        "Oeuvres": "Œuvres",
+        "Biographie": "Biographie",
+        "Actualités": "Actualités"
     },
     "Oeuvres": {
         "Archétypes": "Archétypes",

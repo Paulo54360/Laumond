@@ -9,13 +9,14 @@ import { PrimeNGConfig } from 'primeng/api';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  items!: MenuItem[];
+  items: MenuItem[] = [];
+  translatedItems: MenuItem[] = [];
   visibleSidebar: boolean = false;
   isMobile: boolean = false;
   currentLang = 'fr';
 
-  constructor(private primengConfig: PrimeNGConfig, private translate: TranslateService) {
-    translate.setDefaultLang(this.currentLang);
+  constructor(private primengConfig: PrimeNGConfig, private translateService: TranslateService) {
+    translateService.setDefaultLang(this.currentLang);
   }
 
   ngOnInit() {
@@ -27,6 +28,8 @@ export class NavbarComponent implements OnInit {
       { label: 'Actualités', icon: 'pi pi-calendar', routerLink: '/news' }
     ];
 
+    this.translateItems(); // Traduire les labels initiaux
+
     window.addEventListener('resize', () => {
       this.isMobile = window.innerWidth < 768;
     }, false);
@@ -35,16 +38,28 @@ export class NavbarComponent implements OnInit {
   }
 
   useLanguage(language: string) {
-    this.translate.use(language);
+    this.translateService.use(language);
+    this.translateItems(); // Réappliquer la traduction lorsque la langue est changée
   }
 
   switchLanguage() {
     if (this.currentLang === 'fr') {
-      this.translate.use('en');
+      this.translateService.use('en');
       this.currentLang = 'en';
     } else {
-      this.translate.use('fr');
+      this.translateService.use('fr');
       this.currentLang = 'fr';
     }
+
+    this.translateItems(); // Réappliquer la traduction lorsque la langue est changée
+  }
+
+  translateItems() {
+    this.translateService.get('navbar').subscribe((translations: any) => {
+      this.translatedItems = this.items.map(item => ({
+        ...item,
+        label: translations[item.label!] || item.label
+      }));
+    });
   }
 }

@@ -17,10 +17,6 @@
   
   <p-sidebar [(visible)]="visibleSidebar" [baseZIndex]="10000" [style]="{width: '200px'}" *ngIf="isMobile || visibleSidebar">
     <ul>
-            <button (click)="switchLanguage()">
-              <img *ngIf="currentLang == 'fr'" src="assets/usaFlag.png" alt="EN">
-              <img *ngIf="currentLang == 'en'" src="assets/franceFlag.png" alt="FR">
-            </button>
       <li *ngFor="let item of translatedItems">
         <a [routerLink]="item.routerLink">{{ item.label }}</a>
       </li>

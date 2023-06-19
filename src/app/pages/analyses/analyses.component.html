@@ -1,1 +1,37 @@
-<p>analyses works!</p>
+<div class="card">
+    <p-tabView>
+        <p-tabPanel header="Concordance Universelle">
+            <div class="text-container">
+            <h2>
+              {{ 'Analyses.TitreCU' | translate }}
+            </h2>
+            <p>
+                {{ 'Analyses.TexteCU' | translate }}
+            </p>
+            <p id="Ziclo">
+                {{ 'Analyses.AuteurCU' | translate }}
+            </p>
+            </div>
+
+        </p-tabPanel>
+        <p-tabPanel header="Comme deux aimants">
+            <div class="text-container">
+                <h2>
+                  {{ 'Analyses.TitreCDA' | translate }}
+                </h2>
+                <p>
+                    {{ 'Analyses.Texte1CDA' | translate }}
+                </p>
+                <p>
+                    {{ 'Analyses.Texte2CDA' | translate }}
+                </p>
+                <p>
+                    {{ 'Analyses.Texte3CDA' | translate }}
+                </p>
+                <p id="Ziclo">
+                    {{ 'Analyses.AuteurCDA' | translate }}
+                </p>
+                </div>
+        </p-tabPanel>
+    </p-tabView>
+</div>

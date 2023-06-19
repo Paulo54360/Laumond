@@ -1,0 +1,26 @@
+.text-container {
+    width: 90%; /* largeur de la zone de texte */
+    margin: auto; /* centrage horizontal */
+    font-size: 1.2em; /* taille de police */
+    line-height: 1.5em; /* hauteur de ligne */
+    text-align: justify; /* alignement justifié */
+    padding: 0px; /* espacement intérieur */
+  
+    p{
+      margin: 1.2em 0;
+      padding: 0;
+    }
+
+    #Ziclo{
+      font-style: normal;
+      font-weight: bold;
+    }
+    
+    // @media screen and (max-width: 768px) {
+    //  .h2{
+    //    font-size: 1em;
+    //  }
+        
+    // }
+  }
+  

@@ -26,6 +26,7 @@ import { DrawingsComponent } from './components/drawings/drawings.component';
 import { CarouselModule } from 'primeng/carousel';
 import { MenubarModule } from 'primeng/menubar';
 import { SidebarModule } from 'primeng/sidebar';
+import { TabViewModule } from 'primeng/tabview';
 import { FooterComponent } from './components/footer/footer.component';
 import { TranscriptionsComponent } from './components/transcriptions/transcriptions.component';
 import { AnalysesComponent } from './pages/analyses/analyses.component';
@@ -60,6 +61,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     CarouselModule,
     FontAwesomeModule,
     MatPaginatorModule,
+    TabViewModule,
     MenubarModule,
     SidebarModule,
     NgbModule,

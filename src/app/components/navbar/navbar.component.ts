@@ -22,10 +22,10 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.primengConfig.ripple = true;
     this.items = [
-      { label: 'MétaHisme', icon: 'pi pi-home', routerLink: '/metahisme' },
-      { label: 'Oeuvres', icon: 'pi pi-image', routerLink: '/oeuvre' },
-      { label: 'Biographie', icon: 'pi pi-user', routerLink: '/biographie' },
-      { label: 'Actualités', icon: 'pi pi-calendar', routerLink: '/news' }
+      { label: 'MétaHisme', routerLink: '/metahisme' },
+      { label: 'Oeuvres',  routerLink: '/oeuvre' },
+      { label: 'Biographie', routerLink: '/biographie' },
+      { label: 'Actualités',  routerLink: '/news' }
     ];
 
     this.translateItems(); // Traduire les labels initiaux

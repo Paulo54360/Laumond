@@ -47,7 +47,8 @@ a{
 }
 
 p-menubar {
-  position: sticky;
+  position: static;
+  width: 100%;
   z-index: 1;
   top: 0;
 

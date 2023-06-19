@@ -25,7 +25,9 @@ export class NavbarComponent implements OnInit {
       { label: 'MétaHisme', routerLink: '/metahisme' },
       { label: 'Oeuvres',  routerLink: '/oeuvre' },
       { label: 'Biographie', routerLink: '/biographie' },
-      { label: 'Actualités',  routerLink: '/news' }
+      { label: 'Analyses', routerLink: '/analyses' },
+    
+      // { label: 'Actualités',  routerLink: '/news' }
     ];
 
     this.translateItems(); // Traduire les labels initiaux

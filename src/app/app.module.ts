@@ -28,6 +28,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { SidebarModule } from 'primeng/sidebar';
 import { FooterComponent } from './components/footer/footer.component';
 import { TranscriptionsComponent } from './components/transcriptions/transcriptions.component';
+import { AnalysesComponent } from './pages/analyses/analyses.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -47,7 +48,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     DeploymentsComponent,
     DrawingsComponent,
     FooterComponent,
-    TranscriptionsComponent
+    TranscriptionsComponent,
+    AnalysesComponent
   ],
   imports: [
     AppRoutingModule,

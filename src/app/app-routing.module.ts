@@ -11,6 +11,7 @@ import { ArchetypesComponent } from '@components/archetypes/archetypes.component
 import { DeploymentsComponent } from '@components/deployments/deployments.component';
 import { DrawingsComponent } from '@components/drawings/drawings.component';
 import { TranscriptionsComponent } from '@components/transcriptions/transcriptions.component';
+import { AnalysesComponent } from './pages/analyses/analyses.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'deployments', component: DeploymentsComponent },
   { path: 'drawings', component: DrawingsComponent },
   { path: 'transcriptions', component: TranscriptionsComponent },
+  { path: 'analyses', component: AnalysesComponent },
   { path: 'news', component: NewsComponent },
 
 ];

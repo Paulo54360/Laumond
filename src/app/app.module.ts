@@ -22,14 +22,18 @@ import { NewsComponent } from 'src/app/pages/news/news.component';
 import { ArchetypesComponent } from './components/archetypes/archetypes.component';
 
 import { DeploymentsComponent } from './components/deployments/deployments.component';
-import { DrawingsComponent } from './components/drawings/drawings.component';
+import { DrawingsComponent } from './pages/oeuvre/drawings/drawings.component';
 import { CarouselModule } from 'primeng/carousel';
 import { MenubarModule } from 'primeng/menubar';
 import { SidebarModule } from 'primeng/sidebar';
 import { TabViewModule } from 'primeng/tabview';
+import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
+
 import { FooterComponent } from './components/footer/footer.component';
-import { TranscriptionsComponent } from './components/transcriptions/transcriptions.component';
+import { TranscriptionsComponent } from './pages/oeuvre/transcriptions/transcriptions.component';
 import { AnalysesComponent } from './pages/analyses/analyses.component';
+import { ButtonUpPageComponent } from './components/button-up-page/button-up-page.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -50,11 +54,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     DrawingsComponent,
     FooterComponent,
     TranscriptionsComponent,
-    AnalysesComponent
+    AnalysesComponent,
+    ButtonUpPageComponent
   ],
   imports: [
     AppRoutingModule,
     AmplifyAuthenticatorModule,
+    ButtonModule,
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -64,6 +70,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     TabViewModule,
     MenubarModule,
     SidebarModule,
+
+    RippleModule,
     NgbModule,
     TranslateModule.forRoot({
       loader: {

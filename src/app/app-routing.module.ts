@@ -9,8 +9,8 @@ import { NewsComponent } from 'src/app/pages/news/news.component';
 import { HomepageComponent } from "src/app/pages/homepage/homepage.component";
 import { ArchetypesComponent } from '@components/archetypes/archetypes.component';
 import { DeploymentsComponent } from '@components/deployments/deployments.component';
-import { DrawingsComponent } from '@components/drawings/drawings.component';
-import { TranscriptionsComponent } from '@components/transcriptions/transcriptions.component';
+import { DrawingsComponent } from 'src/app/pages/oeuvre/drawings/drawings.component';
+import { TranscriptionsComponent } from 'src/app/pages/oeuvre/transcriptions/transcriptions.component';
 import { AnalysesComponent } from './pages/analyses/analyses.component';
 
 const routes: Routes = [

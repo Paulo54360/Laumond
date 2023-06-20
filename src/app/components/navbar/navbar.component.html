@@ -25,6 +25,7 @@
     </ng-template>
   </p-sidebar>
   
-<button pButton type="button" (click)="visibleSidebar = true" *ngIf="isMobile" class="pi pi-bars">
+  <button class="navbar-button" (click)="visibleSidebar = true" *ngIf="isMobile">
+    <fa-icon [icon]="['fas', 'bars']"></fa-icon>
+  </button>
   
-</button>

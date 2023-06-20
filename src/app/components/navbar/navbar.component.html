@@ -1,5 +1,4 @@
 <p-menubar [model]="translatedItems" *ngIf="!isMobile || visibleSidebar">
-    
     <ng-template pTemplate="items" let-item>
       <a [routerLink]="item.routerLink">{{ 'navbar.' + item.label | translate }}</a>
     </ng-template>

@@ -22,6 +22,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.primengConfig.ripple = true;
     this.items = [
+      { label: 'Patrick Laumond', routerLink: '' },
       { label: 'MétaHisme', routerLink: '/metahisme' },
       { label: 'Oeuvres',  routerLink: '/oeuvre' },
       { label: 'Biographie', routerLink: '/biographie' },

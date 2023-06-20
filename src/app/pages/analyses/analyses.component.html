@@ -1,20 +1,54 @@
-<div class="card">
     <p-tabView>
         <p-tabPanel header="Concordance Universelle">
             <div class="text-container">
-            <h2>
-              {{ 'Analyses.TitreCU' | translate }}
-            </h2>
-            <p>
-                {{ 'Analyses.TexteCU' | translate }}
-            </p>
-            <p id="Ziclo">
-                {{ 'Analyses.AuteurCU' | translate }}
-            </p>
-            </div>
+                <div class="img-fluid">
+                    <div class="image-gallery-item"
+                         *ngFor="let url of imageUrls  let i = index">
+                      <img [src]="url" [alt]="titles[url]" (click)="openModal(i)" />
+                    </div>
+                    <div class="modal" [class.show]="currentImageIndex !== null" (click)="closeModal()">
+                      <div class="modal-content">
+                        <img class="modal-image" [src]="currentImageIndex !== null ? imageUrls[currentImageIndex] : ''" [alt]="currentImageIndex !== null ? titles[imageUrls[currentImageIndex]] : ''" />
+                      </div>
+                    </div>
+                </div>
+                <h3 class="titre">
+                    Concordance Universelle - 2022
+                </h3>
+
+                <div class="content-container">
+                  <h2>
+                    {{ 'Analyses.TitreCU' | translate }}
+                  </h2>
+                  
+                  <p>
+                    {{ 'Analyses.TexteCU' | translate }}
+                  </p>
+                  <p id="Ziclo">
+                    {{ 'Analyses.AuteurCU' | translate }}
+                  </p>
+                </div>
+                </div>
+              
 
         </p-tabPanel>
         <p-tabPanel header="Comme deux aimants">
+          <div class="text-container">
+            <div class="img-fluid">
+                <div class="image-gallery-item"
+                     *ngFor="let url of imageUrls2 let i = index">
+                  <img [src]="url" [alt]="titles[url]" (click)="openModal(i)" />
+                </div>
+                <div class="modal" [class.show]="currentImageIndex !== null" (click)="closeModal()">
+                  <div class="modal-content">
+                    <img class="modal-image" [src]="currentImageIndex !== null ? imageUrls2[currentImageIndex] : ''" [alt]="currentImageIndex !== null ? titles[imageUrls[currentImageIndex]] : ''" />
+                  </div>
+                </div>
+            </div>
+            <h3 class="titre">
+              Le mobile d'ouverture des univers parallèles, 2023.
+            </h3>
+          </div>
             <div class="text-container">
                 <h2>
                   {{ 'Analyses.TitreCDA' | translate }}
@@ -34,4 +68,3 @@
                 </div>
         </p-tabPanel>
     </p-tabView>
-</div>

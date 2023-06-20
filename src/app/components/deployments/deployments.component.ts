@@ -23,8 +23,8 @@ export class DeploymentsComponent {
   }
 
   async loadDeployments() {
-    const subfolders = ['01', '02', '03', '04', '05'];
-    const fileRanges = [[1, 4], [1, 3], [1, 6], [1, 2], [1, 4]]; // Plage de boucle pour chaque sous-dossier
+    const subfolders = ['01', '02', '03', '04', '05', '06'];
+    const fileRanges = [[1, 4], [1, 3], [1, 6], [1, 2], [1, 4], [1,7]]; // Plage de boucle pour chaque sous-dossier
 
     for (let i = 0; i < subfolders.length; i++) {
       const subfolder = subfolders[i];

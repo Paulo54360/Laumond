@@ -22,24 +22,87 @@
   }
   
   
-
-.text-container {
-      
-    width: 90%; /* largeur de la zone de texte */
-    margin: auto; /* centrage horizontal */
-    font-size: 1.2em; /* taille de police */
-    line-height: 1.5em; /* hauteur de ligne */
-    padding: 0px; /* espacement intérieur */
+  .text-container {
+    width: 90%;
+    margin: auto;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    padding: 0;
+    
+    .img-fluid {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
+      margin-top: 1em;
   
-    p{
+      justify-content: center;
+      
+      img{
+        width: 95%;
+        height: auto;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+      }
+    }
+
+    h3{
+      color: #525252;
+      font-size: 11px;
+      margin-bottom: 5%;
+      padding-left: 5px;
+      white-space: wrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      text-align: start;
+    }
+
+    p {
       margin: 1.2em 0;
       padding: 0;
     }
-
-    #Ziclo{
+  
+  
+    #Ziclo {
       font-style: normal;
       font-weight: bold;
     }
-
+  
   }
   
+  .modal {
+    background-color: #fffcfcd7;
+    display: none;
+    height: 100%;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  
+    .modal-content {
+      align-items: center;
+      display: flex;
+      height: 90%;  // Modifié pour occuper plus d'espace sur l'écran
+      justify-content: center;
+      margin: auto;
+      width: 90%;   // Modifié pour occuper plus d'espace sur l'écran
+    }
+  
+    .modal-image {
+      max-height: 90vh;
+      max-width: 90vw;
+      border-radius:5px;
+    }
+  
+    &.show {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      
+      .close {
+        display: inline-block; // Afficher la croix quand le modal est ouvert
+      }
+    }
+  }

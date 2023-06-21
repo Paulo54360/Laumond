@@ -1,51 +1,88 @@
 
-// Default settings
-*{
-  color: #525252;
-  text-decoration: none;
+:host ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link{
+  border-radius: 0px;   
+  box-shadow: inset 0 0 0 0.2rem #e6686800;
 }
 
-// Custom Menubar
-:host ::ng-deep .p-menubar {
-  display: flex;
-  margin-bottom: 3%;
-  padding-left: 1.5%;
-  align-items: right;
-  background-color: #ffffff;
-  border: none;
+:host ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text{
+color: #8B0000;
 
-  .p-menubar-root-list {
-    li {
-      margin-right: 20px;
-      font-size: 24px;
-      transition: color 0.2s ease-in-out;
-      
-      a {
-        color: #525252;
-        text-decoration: none;
-        
-        &:hover {
-          color: #8B0000;
-        }
+}
+*{
+
+color: #525252;
+text-decoration: none;
+}
+
+
+:host ::ng-deep .p-menubar {
+
+display: flex;
+margin-bottom: 3%;
+padding-left: 1.5%;
+align-items: right;
+background-color: #ffffff;
+border: none;
+.p-menubar-root-list {
+  li {
+    margin-right: 20px;
+    font-size: 24px;
+    transition: color 0.2s ease-in-out;
+    a {
+      color: #525252;
+      text-decoration: none;
+      &:hover {
+        color: #8B0000;
       }
     }
   }
-  img{
-    width: 40px;
-    height: 22px;
-  }
-
+}
 }
 
-// Sidebar
+// aggrandi la taille de la class Laumond 
+a{
+padding-right: 20px;
+font-size: 24px;
+}
+
+p-menubar {
+position: static;
+width: 100%;
+z-index: 1;
+top: 0;
+
+  li {
+      display: flex;
+      flex-direction: row;
+      margin-right: 20px;
+      font-size: 24px;
+      transition: color 0.2s ease-in-out;
+
+      a {
+          display: block;
+          color: #000;
+          text-decoration: none;
+      }
+
+      &:hover a {
+          color: #8B0000;
+      }
+  };
+  img{
+      width: 40px;
+      height: 25px;
+    }
+  
+}
+
 p-sidebar {
   ul {
     list-style-type: none;
     padding: 0;
-    font-size: 16px;
+    font-size: 16px; // base size for mobile
 
     @media screen and (min-width: 768px) {
-      font-size: 24px;
+      font-size: 24px; // larger size for tablets and above
     }
 
     li {
@@ -54,20 +91,20 @@ p-sidebar {
       a {
         color: #000;
         text-decoration: none;
+      }
 
-        &:hover {
-          color: #8B0000;
-        }
+      &:hover a {
+        color: #8B0000;
       }
     }
   }
-
-  img {
+  img{
     margin-top: 10px;
-    width: 40px;
-    height: 22px;
+    width: 25px;
+    height: 20px;
   }
 }
+
 
 // Mobile Menu Button
 button {
@@ -81,7 +118,7 @@ button {
 
   &.custom-menu-button {
     background-color: transparent !important;
-    color: #000 !important;
+    color: #cc0000 !important;
   }
 
   &.rotated {
@@ -105,6 +142,7 @@ button {
   
   i.pi.pi-bars {
     color: rgba(0, 0, 0, 0) !important; // remplacer par la couleur de votre choix
+
   }
   @media screen and (min-width: 768px) {
     font-size: 32px;  

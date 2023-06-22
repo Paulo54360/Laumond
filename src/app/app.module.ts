@@ -19,9 +19,9 @@ import { MetahismeComponent } from 'src/app/pages/metahisme/metahisme.component'
 import { OeuvreComponent } from 'src/app/pages/oeuvre/oeuvre.component';
 import { NewsComponent } from 'src/app/pages/news/news.component';
 
-import { ArchetypesComponent } from './components/archetypes/archetypes.component';
+import { ArchetypesComponent } from './pages/oeuvre/archetypes/archetypes.component';
 
-import { DeploymentsComponent } from './components/deployments/deployments.component';
+import { DeploymentsComponent } from './pages/oeuvre/deployments/deployments.component';
 import { DrawingsComponent } from './pages/oeuvre/drawings/drawings.component';
 import { CarouselModule } from 'primeng/carousel';
 import { MenubarModule } from 'primeng/menubar';

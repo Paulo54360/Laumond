@@ -14,40 +14,37 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 export class NavbarComponent implements OnInit {
   items: MenuItem[] = [];
   translatedItems: MenuItem[] = [];
-  visibleSidebar: boolean = false;
   isMobile: boolean = false;
+  showTieredMenu: boolean = false;
   currentLang = 'fr';
 
   constructor(private primengConfig: PrimeNGConfig, private translateService: TranslateService, private library: FaIconLibrary) {
     translateService.setDefaultLang(this.currentLang);
     library.addIcons(faBars);
-
   }
 
   ngOnInit() {
     this.primengConfig.ripple = true;
     this.items = [
-      { label: 'H', routerLink: '/' },
-      { label: 'Patrick Laumond', routerLink: '/biographie' },
+      { label: 'Patrick Laumond', routerLink: '/' },
       { label: 'MétaHisme', routerLink: '/metahisme' },
+      { label: 'Biographie', routerLink: '/biographie' },
       { label: 'Oeuvres',  routerLink: '/oeuvre' },
       { label: 'Analyses', routerLink: '/analyses' },
-    
-      // { label: 'Actualités',  routerLink: '/news' }
     ];
 
-    this.translateItems(); // Traduire les labels initiaux
+    this.translateItems();
 
     window.addEventListener('resize', () => {
-      this.isMobile = window.innerWidth < 768;
+      this.isMobile = window.innerWidth < 1024;
     }, false);
 
-    this.isMobile = window.innerWidth < 760;
+    this.isMobile = window.innerWidth < 1024;
   }
 
   useLanguage(language: string) {
     this.translateService.use(language);
-    this.translateItems(); // Réappliquer la traduction lorsque la langue est changée
+    this.translateItems();
   }
 
   switchLanguage() {
@@ -59,7 +56,7 @@ export class NavbarComponent implements OnInit {
       this.currentLang = 'fr';
     }
 
-    this.translateItems(); // Réappliquer la traduction lorsque la langue est changée
+    this.translateItems();
   }
 
   translateItems() {
@@ -71,3 +68,4 @@ export class NavbarComponent implements OnInit {
     });
   }
 }
+

@@ -1,31 +1,30 @@
-<p-menubar [model]="translatedItems" *ngIf="!isMobile || visibleSidebar">
+<p-menubar [model]="translatedItems" *ngIf="!isMobile">
     <ng-template pTemplate="items" let-item>
       <a [routerLink]="item.routerLink">{{ 'navbar.' + item.label | translate }}</a>
     </ng-template>
     <ng-template pTemplate="end">
-      <button (click)="switchLanguage()">
-        <img *ngIf="currentLang === 'fr'" src="assets/enFlag.png" alt="EN">
-        <img *ngIf="currentLang === 'en'" src="assets/frFlag.png" alt="FR">
+      <button (click)="switchLanguage()" class="flags">
+        <img *ngIf="currentLang === 'fr'" src="assets/ukflag.svg" alt="EN">
+        <img *ngIf="currentLang === 'en'" src="assets/frflag.svg" alt="FR">
       </button>
     </ng-template>
-  </p-menubar>
-  
-  <p-sidebar [(visible)]="visibleSidebar" [baseZIndex]="10000" [style]="{width: '200px'}" *ngIf="isMobile || visibleSidebar">
-    <ul>
-      <li *ngFor="let item of translatedItems">
-        <a [routerLink]="item.routerLink">{{ item.label }}</a>
-      </li>
-    </ul>
+</p-menubar>
 
-    <ng-template pTemplate="end">
-      <button (click)="switchLanguage()">
-        <img *ngIf="currentLang == 'fr'" src="assets/enFlag.png" alt="EN">
-        <img *ngIf="currentLang == 'en'" src="assets/frFlag.png" alt="FR">
-      </button>
-    </ng-template>
-  </p-sidebar>
-  
-  <button class="navbar-button" (click)="visibleSidebar = true" *ngIf="isMobile">
-    <fa-icon [icon]="['fas', 'bars']"></fa-icon>
-  </button> 
-  
+
+
+<!-- The translation button for mobile format -->
+<div class="Mobile">
+  <div style="display: flex; flex-direction: row;">
+    <button #btn type="button" pButton icon="pi pi-bars" label="Show" (click)="menu.toggle($event)" *ngIf="isMobile " class="your-class-name">
+    </button>
+    <button (click)="switchLanguage()" *ngIf="isMobile" class="flags">
+      <img *ngIf="currentLang === 'fr'" src="assets/ukflag.svg" alt="EN" width="30" height="20">
+      <img *ngIf="currentLang === 'en'" src="assets/frflag.svg" alt="FR" width="30" height="20">
+    </button>
+  </div>
+</div>
+
+
+<p-tieredMenu  #menu [model]="items" [popup]="true">
+  <!-- The translation button for mobile format -->
+</p-tieredMenu>

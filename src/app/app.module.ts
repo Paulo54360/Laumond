@@ -25,10 +25,11 @@ import { DeploymentsComponent } from './pages/oeuvre/deployments/deployments.com
 import { DrawingsComponent } from './pages/oeuvre/drawings/drawings.component';
 import { CarouselModule } from 'primeng/carousel';
 import { MenubarModule } from 'primeng/menubar';
-import { SidebarModule } from 'primeng/sidebar';
+
 import { TabViewModule } from 'primeng/tabview';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
+import { TieredMenuModule } from 'primeng/tieredmenu';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { TranscriptionsComponent } from './pages/oeuvre/transcriptions/transcriptions.component';
@@ -69,7 +70,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatPaginatorModule,
     TabViewModule,
     MenubarModule,
-    SidebarModule,
+
+    TieredMenuModule,
 
     RippleModule,
     NgbModule,

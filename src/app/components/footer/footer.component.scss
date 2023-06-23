@@ -12,7 +12,9 @@
 }
 
 .footer-text {
+    display: flex;
     font-size: 0.8em;
+    justify-content: center;
     margin-bottom: 10px;
 }
 

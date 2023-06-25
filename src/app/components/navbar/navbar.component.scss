@@ -74,8 +74,9 @@ top: 0;
     }
   
 }
-
-
+:host ::ng-deep .p-tieredmenu.p-tieredmenu-overlay{
+  border-radius: 0px;  
+}
 
 :host ::ng-deep .your-class-name {
   display: flex;
@@ -91,14 +92,15 @@ top: 0;
   transition: color 0.2s ease-in-out, opacity 0.5s ease-in-out;
   
   &:hover,
-  &:active,
+  &:active, 
   &:target,
   &:focus {
-    background-color: #cc000000 !important; // Votre couleur rouge
-    outline: none;
-    box-shadow: none !important;
-    color: #8B0000;
+      background-color: #cc0000 !important; 
+      color: #ffffff !important;
+      outline: none !important;
+      box-shadow: none !important;
   }
+  
 
   &.show {
     opacity: 1;

@@ -23,9 +23,9 @@ export class AnalysesComponent {
   }
 
   async loadDeployments() {
-        const imageUrl1 = `${environment.apiUrl}/Deployments/06/02.jpg`;
-        const imageUrl2 = `${environment.apiUrl}/Deployments/06/04.jpg`;
-        const imageUrl3 = `${environment.apiUrl}/Deployments/06/06.jpg`;
+        const imageUrl1 = `${environment.apiUrl}/Deployments/00/02.jpg`;
+        const imageUrl2 = `${environment.apiUrl}/Deployments/00/04.jpg`;
+        const imageUrl3 = `${environment.apiUrl}/Deployments/00/06.jpg`;
         this.imageUrls2.push(imageUrl3);
         this.imageUrls.push(imageUrl1, imageUrl2);
   }

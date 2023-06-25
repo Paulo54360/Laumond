@@ -15,7 +15,7 @@
 <!-- The translation button for mobile format -->
 <div class="Mobile">
   <div style="display: flex; flex-direction: row;">
-    <button #btn type="button" pButton icon="pi pi-bars" label="Show" (click)="menu.toggle($event)" *ngIf="isMobile " class="your-class-name">
+    <button #btn type="button" pButton icon="pi pi-bars" label="H" (click)="menu.toggle($event)" *ngIf="isMobile " class="your-class-name">
     </button>
     <button (click)="switchLanguage()" *ngIf="isMobile" class="flags">
       <img *ngIf="currentLang === 'fr'" src="assets/ukflag.svg" alt="EN" width="30" height="20">

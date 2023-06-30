@@ -4,7 +4,7 @@
     width: 100%;
     text-align: center;
     margin-top: auto;
-    }
+}
 
 .container {
     max-width: 960px;
@@ -13,10 +13,8 @@
 
 .footer-text {
     display: flex;
-    font-size: 0.9em;
-    justify-content: center;
     text-align: center;
-    margin-bottom: 10px;
+    justify-content: center;
 }
 
 .social-links {
@@ -38,3 +36,10 @@
 
 /* Utilisez la bibliothèque Font Awesome pour les icônes */
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+
+@media screen and (max-width:1024px) {
+    .footer-text {
+        font-size: 0.7em;
+    }
+}

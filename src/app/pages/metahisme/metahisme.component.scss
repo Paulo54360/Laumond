@@ -1,7 +1,6 @@
 .text-container {
   width: 90%; /* largeur de la zone de texte */
   margin: auto; /* centrage horizontal */
-
   font-size: 1.2em; /* taille de police */
   line-height: 1.5em; /* hauteur de ligne */
   padding: 0px; /* espacement intérieur */
@@ -15,8 +14,7 @@
 
   p{
     margin: 1.2em 0;
-    padding: 0;
-    
+    padding: 0
   }
 
 
@@ -26,17 +24,5 @@
     font-style: italic;
     text-align: left;
     
-  }
-  #citation{
-    width: 90%;
-    justify-content: center;
-    font-style: italic;
-    margin: 1em;
-    padding-left: 2%;
-    
-    #Edith{
-      font-style: normal;
-      font-weight: bold;
-    }
   }
 }

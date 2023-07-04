@@ -29,3 +29,10 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+  reports:
+  cypressReports:
+    files:
+      - '**/*'
+    baseDirectory: 'cypress/reports'
+    fileFormat: 'json'
+    discardPastReports: true

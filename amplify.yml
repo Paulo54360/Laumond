@@ -6,13 +6,24 @@ frontend:
         - rm -rf $CACHE_DIR
         - npm ci
         - npm install -g @angular/cli
-
     build:
       commands:
         - ng build --configuration production
+    test:
+      phases:
+        preTest:
+          commands:
+            - npm install -g @angular/cli
+            - npm install
+            - echo Ensuring that Cypress binary is cached...
+            - $(npm bin)/cypress install
+        test:
+          commands:
+            - npm test
+            - $(npm bin)/cypress run
   artifacts:
     # IMPORTANT - Please verify your build output directory
-    baseDirectory: dist/patrick-laumond 
+    baseDirectory: dist/patrick-laumond
     files:
       - '**/*'
   cache:

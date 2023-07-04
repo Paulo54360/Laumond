@@ -4,23 +4,24 @@ import { PrimeNGConfig } from 'primeng/api';
 import { NavbarComponent } from '@components/navbar/navbar.component';
 import { NavbarTraduction, OeuvresTraduction, MetaHismeTraduction, AnalysesTraduction } from '@interfaces/traductions.interfaces';
 import { of } from 'rxjs';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'; // Import du CUSTOM_ELEMENTS_SCHEMA
 
-const FAKE_TRANSLATIONS: Record<string, NavbarTraduction > = {
+const FAKE_TRANSLATIONS: Record<string, NavbarTraduction> = {
   en: {
     "MétaHisme": "MetaHism",
     "Oeuvres": "Artworks",
     "Biographie": "Biography",
     "Actualités": "News",
     "Analyses": "Analyzes"
-    },
+  },
   fr: {
     "MétaHisme": "MétaHisme",
     "Oeuvres": "Œuvres",
     "Biographie": "Biographie",
     "Actualités": "Actualités",
     "Analyses": "Analyses"
-    }
-}
+  }
+};
 
 const mockTranslateService = {
   use: jest.fn(),
@@ -38,7 +39,8 @@ describe('NavbarComponent', () => {
       providers: [
         { provide: TranslateService, useValue: mockTranslateService },
         { provide: PrimeNGConfig, useValue: {} }
-      ]
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA] // Ajout du CUSTOM_ELEMENTS_SCHEMA
     })
       .compileComponents();
   });

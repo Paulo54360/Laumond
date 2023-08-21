@@ -1,14 +1,11 @@
-import { defineConfig } from "cypress";
+import { CypressConfig } from 'cypress';
 
-export default defineConfig({
-  projectId: 'qsbp7v',
-  video: true,
-  viewportHeight: 900,
+const config: CypressConfig = {
+  baseUrl: 'http://localhost:4200',
+  integrationFolder: 'e2e',
+  video: false,
   viewportWidth: 1440,
+  viewportHeight: 900,
+};
 
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
-  },
-});
+export default config;

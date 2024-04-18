@@ -60,12 +60,12 @@
     p {
       margin: 1.2em 0;
       padding: 0;
-    
-    @media (min-width: 601px) {
-      .element {
-        text-align: justify;
+      text-align: justify;
+
+      @media only screen and (max-width: 600px) {   
+        text-align: start;
       }
-    }
+  
   }
   
     #Ziclo {

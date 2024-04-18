@@ -1,7 +1,6 @@
 .Biographie {
   display: flex;
   flex-direction: row;
-  text-align: justify;
 
   .nav-menu {
     display: flex;
@@ -30,6 +29,8 @@
     padding: 20px;
     width: 80%;
     margin: auto 300px auto auto;
+    text-align: justify;
+
 
     h3 {
       margin: 20px 0;
@@ -52,6 +53,7 @@
     .text-container {
       margin-right: 0;
       width: 100%;
+      text-align: left;
     }
   }
 }

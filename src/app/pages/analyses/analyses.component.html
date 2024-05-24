@@ -1,4 +1,89 @@
     <p-tabView>
+      <p-tabPanel header="Afin qu'un jour advienne">
+        <div class="text-container">
+          <div class="img-fluid">
+            <div class="image-gallery-item"
+                 *ngFor="let url of imageUrls3  let i = index">
+              <img [src]="url" [alt]="titles[url]" (click)="openModal(i)" />
+            </div>
+            <div class="modal" [class.show]="currentImageIndex !== null" (click)="closeModal()">
+              <div class="modal-content">
+                <img class="modal-image" [src]="currentImageIndex !== null ? imageUrls3[currentImageIndex] : ''"
+                     [alt]="currentImageIndex !== null ? titles[imageUrls3[currentImageIndex]] : ''" />
+              </div>
+            </div>
+          </div>
+          <h3 class="titre">
+            Le grand Mikado de la pensée humaine
+          </h3>
+
+          <div class="content-container">
+            <h2>
+              {{ 'Analyses.TitreAQJA' | translate }}
+            </h2>
+            <p>
+              {{ 'Analyses.Texte1AQJA' | translate }}
+              {{ 'Analyses.Texte2AQJA' | translate }}
+              {{ 'Analyses.Texte3AQJA' | translate }}
+              {{ 'Analyses.Texte4AQJA' | translate }}
+              {{ 'Analyses.Texte5AQJA' | translate }}
+              {{ 'Analyses.Texte6AQJA' | translate }}<br>
+              {{ 'Analyses.Texte7AQJA' | translate }}
+              {{ 'Analyses.Texte8AQJA' | translate }}
+              {{ 'Analyses.Texte9AQJA' | translate }}
+              {{ 'Analyses.Texte10AQJA' | translate }}
+            </p>
+            <p>
+              {{ 'Analyses.Texte11AQJA' | translate }}
+              {{ 'Analyses.Texte12AQJA' | translate }}<br>
+            </p>
+            <p>
+              {{ 'Analyses.Texte13AQJA' | translate }}
+              {{ 'Analyses.Texte14AQJA' | translate }}
+              {{ 'Analyses.Texte15AQJA' | translate }}
+              {{ 'Analyses.Texte16AQJA' | translate }}
+            </p>
+            <p>
+              {{ 'Analyses.Texte17AQJA' | translate }}<br>
+            </p>
+            <p>
+              <br>
+              {{ 'Analyses.Texte18AQJA' | translate }}<br>
+            </p>
+            <p>
+              {{ 'Analyses.Texte19AQJA' | translate }}<br>
+              {{ 'Analyses.Texte20AQJA' | translate }}<br>
+              {{ 'Analyses.Texte21AQJA' | translate}}<br>
+              {{ 'Analyses.Texte22AQJA' | translate }}<br>
+            </p>
+            <p>
+              {{ 'Analyses.Texte23AQJA' | translate }}<br>
+              {{ 'Analyses.Texte24AQJA' | translate }}<br>
+              {{ 'Analyses.Texte25AQJA' | translate }}<br>
+              {{ 'Analyses.Texte26AQJA' | translate }}<br>
+            </p>
+            <p>
+              {{ 'Analyses.Texte27AQJA' | translate }}
+              {{ 'Analyses.Texte28AQJA' | translate }}
+              {{ 'Analyses.Texte29AQJA' | translate }}
+              {{ 'Analyses.Texte30AQJA' | translate }}
+              {{ 'Analyses.Texte31AQJA' | translate }}<br>
+            </p>
+            <p>
+              {{ 'Analyses.Texte32AQJA' | translate }}<br>
+              {{ 'Analyses.Texte33AQJA' | translate }}<br>
+              {{ 'Analyses.Texte34AQJA' | translate }}
+            </p>
+            <br>
+            <hr>
+            <p>
+              <sup>1</sup>{{ 'Analyses.Legende1AQJA' | translate }}<br>
+              <sup>2</sup>{{ 'Analyses.Legende2AQJA' | translate }}
+            </p>
+          </div>
+        </div>
+
+      </p-tabPanel>
         <p-tabPanel header="Concordance Universelle">
             <div class="text-container">
                 <div class="img-fluid">
@@ -20,7 +105,7 @@
                   <h2>
                     {{ 'Analyses.TitreCU' | translate }}
                   </h2>
-                  
+
                   <p>
                     {{ 'Analyses.TexteCU' | translate }}
                   </p>
@@ -29,7 +114,7 @@
                   </p>
                 </div>
                 </div>
-              
+
 
         </p-tabPanel>
         <p-tabPanel header="Comme deux aimants">

@@ -14,6 +14,8 @@ export class AnalysesComponent {
   currentImageIndex: number | null = null;
   imageUrls: string[] = [];
   imageUrls2: string[] = [];
+  imageUrls3: string[] = [];
+  imageUrls4: string[] = [];
   titles: Titles = {};
 
   constructor() { }
@@ -26,6 +28,10 @@ export class AnalysesComponent {
         const imageUrl1 = `${environment.apiUrl}/Deployments/00/02.jpg`;
         const imageUrl2 = `${environment.apiUrl}/Deployments/00/04.jpg`;
         const imageUrl3 = `${environment.apiUrl}/Deployments/00/06.jpg`;
+        const imageUrl4 = `${environment.apiUrl}/Deployments/00/08.jpg`;
+        const imageUrl5 = `${environment.apiUrl}/Deployments/00/09.jpg`;
+        const imageUrl6 = `${environment.apiUrl}/Deployments/00/10.jpg`;
+        this.imageUrls3.push(imageUrl4, imageUrl5);
         this.imageUrls2.push(imageUrl3);
         this.imageUrls.push(imageUrl1, imageUrl2);
   }

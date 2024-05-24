@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.text-container {
+  width: 90%;
+  /* largeur de la zone de texte */
+  margin: auto;
+  /* centrage horizontal */
+  font-size: 1.2em;
+  /* taille de police */
+  line-height: 1.5em;
+  /* hauteur de ligne */
+  padding: 0px;
+  /* espacement intérieur */ }
+  .text-container h1 {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto; }
+  .text-container p {
+    margin: 1.2em 0;
+    padding: 0;
+    text-align: justify;
+    /* alignement du texte */ }
+  .text-container #ps {
+    color: #999999;
+    font-size: 0.8em;
+    font-style: italic;
+    text-align: left; }
+
+/*# sourceMappingURL=metahisme.component.css.map */
